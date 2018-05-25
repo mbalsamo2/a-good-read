@@ -1,0 +1,36 @@
+Book.create(name: "The Fault in Our Stars",
+            author: "John Green",
+            summary: "Two teenagers with cancer end up falling in love.",
+            review: "I cried a lot when I read this book and thought it shed some light of the realities of fighting cancer.",
+            rating: 5,
+            image_url: "https://en.wikipedia.org/wiki/The_Fault_in_Our_Stars#/media/File:The_Fault_in_Our_Stars.jpg")
+Book.create(name: "Game of Thrones",
+            author: "George R.R. Martin",
+            summary: "When you play the game of thrones, you win or you die.",
+            review: "Wow. World making, character development, love and war, is there anything this book doesn't have?!",
+            rating: 5,
+            image_url: "http://cherryblossom-books.com/index.php/english-book/fiction/a-game-of-thrones-a-song-of-ice-and-fire-1-hardcover.html")
+Book.create(name: "Thirteen Reasons Why",
+            author: "Jay Asher",
+            summary: "What happens when a teenage girl who commits suicide leaves messages from beyond the grave for the people who bullied her.",
+            review: "A very real depicition on how your actions can do way more harm than you originally thought.",
+            rating: 4,
+            image_url: "https://en.wikipedia.org/wiki/Thirteen_Reasons_Why#/media/File:ThirteenReasonsWhy.jpg")
+Book.create(name: "Three Men in a Boat",
+            author: "Jerome Klapka Jerome",
+            summary: "The depiction of three overworked mens river journey and the incidents that occur during it.",
+            review: "An incredibly slow read.",
+            rating: 1,
+            image_url: "https://en.wikipedia.org/wiki/Three_Men_in_a_Boat#/media/File:Cover_of_Jerome_K_Jerome%27s_Three_Men_in_a_Boat_(1st_ed,_1889).jpg")
+Book.create(name: "Harry Potter and the Socerer's Stone",
+            author: "JK Rowling",
+            summary: "The boy who lived's first year at Hogwarts and all the adventures that follow.",
+            review: "An abolsute masterpiece and anyone who says otherwise can bugger off.",
+            rating: 5,
+            image_url: "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone#/media/File:Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg")
+Book.create(name: "The Notebook",
+            author: "Nicholas Sparks",
+            summary: "A novel of how love endures time and social class.",
+            review: "For a Nicholas Sparks book, it's good, but really was only made better by the movie.",
+            rating: 3,
+            image_url: "https://en.wikipedia.org/wiki/The_Notebook_(novel)#/media/File:The_Notebook_Cover.jpg")
