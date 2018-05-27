@@ -1,18 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './NavBar.css';
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-    <ul>
-      <li><NavLink
-        to="/"
-        exact
-        activeStyle={{
-          background: 'darkblue'
-        }}
-        >Home</NavLink></li>
-      </ul>
+    <div className="NavBar">
+      <NavLink className="NavLink" to="/">Home</NavLink>
     </div>
   );
 };
