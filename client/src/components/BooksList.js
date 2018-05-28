@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import React from 'react';
+import './NavBar.css'
 
 const BooksList = ({bookList}) => {
 
@@ -7,7 +9,7 @@ const BooksList = ({bookList}) => {
   });
 
   return (
-      <div>
+      <div className="BooksPage">
         {books}
       </div>
   )
