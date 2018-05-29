@@ -16,15 +16,22 @@ import './NavBar.css'
 //   )
 // }
 
-export class BooksList extends Component {
-  render() {
+// export class BooksList extends Component {
+//
+//     return (
+//       <div className="BooksPage">
+//         <p>I am a book</p>
+//       </div>
+//     )
+//
+// }
 
-    return (
-      <div className="BooksPage">
-        <p>I am a book</p>
-      </div>
-    )
-  }
+export const BooksList = () => {
+  return (
+    <div className="BooksPage">
+      <p>I am a book</p>
+    </div>
+  )
 }
 
 // export default BooksList
