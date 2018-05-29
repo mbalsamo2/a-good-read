@@ -1,5 +1,5 @@
-// import React, { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
+// import React from 'react';
 import './NavBar.css'
 
 // const BooksList = ({bookList}) => {
@@ -16,7 +16,7 @@ import './NavBar.css'
 //   )
 // }
 
-class BooksList extends Component {
+export class BooksList extends Component {
   render() {
 
     return (
@@ -27,4 +27,4 @@ class BooksList extends Component {
   }
 }
 
-export default BooksList
+// export default BooksList
