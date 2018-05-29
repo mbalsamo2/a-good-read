@@ -2,17 +2,29 @@
 import React from 'react';
 import './NavBar.css'
 
-const BooksList = ({bookList}) => {
+// const BooksList = ({bookList}) => {
+//
+//   const books = bookList.map((book, index) => {
+//     return <img src={book.image_url} key={index} alt="book" />
+//   });
+//
+//   return (
+//       <div className="BooksPage">
+//         <p>I am a book</p>
+//         {books}
+//       </div>
+//   )
+// }
 
-  const books = bookList.map((book, index) => {
-    return <img src={book.image_url} key={index} alt="book" />
-  });
+class BooksList extends Component {
+  render() {
 
-  return (
+    return (
       <div className="BooksPage">
-        {books}
+        <p>I am a book</p>
       </div>
-  )
+    )
+  }
 }
 
 export default BooksList
