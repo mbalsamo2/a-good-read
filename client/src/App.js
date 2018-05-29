@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import  NavBar  from './components/NavBar.js';
 import { Home } from './components/Home.js';
-import { BooksList } from './components/BooksList.js';
+import BooksList from './containers/BooksList.js';
 
 
 class App extends Component {
