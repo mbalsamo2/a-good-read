@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import React from 'react';
 import '../components/NavBar.css';
-// import { Link } from 'react-router-dom';
 import loadBooks from '../actions/bookActions.js';
+// import { Link } from 'react-router-dom';
+// import React from 'react';
 
 class BooksList extends Component {
   // constructor(props) {
