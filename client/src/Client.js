@@ -12,12 +12,13 @@ function checkStatus(response) {
   const error = new Error(`HTTP Error ${response.statusText}`);
   error.status = response.statusText;
   error.response = response;
-  console.log(error); // eslint-disable-line no-console
+  console.log(error);
   throw error;
 }
 
 function parseJSON(response) {
   return response.json();
+  debugger
 }
 
 const Client = { search };

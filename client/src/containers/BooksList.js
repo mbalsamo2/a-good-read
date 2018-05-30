@@ -1,14 +1,30 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
 import loadBooks from '../actions/bookActions.js';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import React from 'react';
 
 class BooksList extends Component {
-  // constructor(props) {
-  //   super(props);
+  constructor() {
+    super();
+
+    this.state = {
+      books: []
+    }
+  }
+
+  // componentDidMount() {
+  //   fetch('http://localhost:3000/books')
+  //   .then(res => res.json() debugger
+  // )
+  //   .then(response => {
+  //     debugger
+  //     this.setState({
+  //       books: response
+  //     })
+  //   })
   // }
- // connect to store reread Redux connect single component
+
 
   render() {
     return (
