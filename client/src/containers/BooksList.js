@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
-import loadBooks from '../actions/bookActions.js';
+import fetchBooks from '../actions/bookActions.js';
 import { Link } from 'react-router-dom';
 // import React from 'react';
 
