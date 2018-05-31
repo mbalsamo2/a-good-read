@@ -6,7 +6,7 @@ import  NavBar  from './components/NavBar.js';
 import { Home } from './components/Home.js';
 // import BooksList from './containers/BooksList.js';
 import BooksPage from './containers/BooksPage.js';
-
+import BookPage from './containers/BookPage.js';
 
 class App extends Component {
 
@@ -17,6 +17,7 @@ class App extends Component {
         <NavBar/>
         <Route exact path="/" component={Home} />
         <Route exact path="/books" component={BooksPage} />
+
         </div>
       </Router>
     );

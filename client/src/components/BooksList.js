@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
-import { Link } from 'react-router-dom';
 import Book from './book.js';
 
 class BooksList extends Component {
@@ -9,7 +8,7 @@ class BooksList extends Component {
     if (this.props.books) {
       const books = this.props.books.map((book, index) => {
         return (
-        <Book book={book} /> )
+        <Book key={index} book={book} /> )
       })
 
       return (
