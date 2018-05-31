@@ -13,9 +13,15 @@ class BooksList extends Component {
   }
 
   render() {
+
+    const books = this.props.books.map((book, index) => {
+      return <p>{book.name}</p>
+    })
+
     return (
       <div className="BooksPage">
         <p>I am a book</p>
+        <p>{books}</p>
       </div>
     )
   }
@@ -28,13 +34,13 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchTpProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
     fetchBooks: fetchBooks
   }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchTpProps)(BooksList);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
 
 // export const BooksList = ({ books }) => {
 //
