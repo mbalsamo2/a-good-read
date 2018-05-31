@@ -1,30 +1,16 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
-import fetchBooks from '../actions/bookActions.js';
+import { fetchBooks } from '../actions/bookActions.js';
 import { Link } from 'react-router-dom';
 // import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 class BooksList extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-      books: []
-    }
+  componentDidMount() {
+    this.props.fetchBooks();
   }
-
-  // componentDidMount() {
-  //   fetch('http://localhost:3000/books')
-  //   .then(res => res.json() debugger
-  // )
-  //   .then(response => {
-  //     debugger
-  //     this.setState({
-  //       books: response
-  //     })
-  //   })
-  // }
-
 
   render() {
     return (
@@ -35,7 +21,20 @@ class BooksList extends Component {
   }
 }
 
-export default BooksList;
+
+const mapStateToProps = (state) => {
+  return {
+    books: state.books
+  }
+}
+
+const mapDispatchTpProps = (dispatch) => {
+  return bindActionCreators({
+    fetchBooks: fetchBooks
+  }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchTpProps)(BooksList);
 
 // export const BooksList = ({ books }) => {
 //
