@@ -12,17 +12,16 @@ class BookPage  extends Component {
 
   render(props) {
     const book = this.props.book;
-    debugger
 
     return (
       <div className="bookDiv">
         <img className="bookImage" src={`${book.image_url}`} alt={book.name} />
         <div className="textDiv">
-          <p>Title: {book.name}</p>
-          <p>Author: {book.author}</p>
-          <p>Summary: {book.summary}</p>
-          <p>Review: {book.review}</p>
-          <p>Rating: {book.rating} stars</p>
+          <p className="title">{book.name}</p>
+          <p className="author">By: {book.author}</p>
+          <p className="summary">Summary: {book.summary}</p>
+          <p className="review">Review: {book.review}</p>
+          <p className="rating">Rating: {book.rating} stars</p>
         </div>
       </div>
     )
