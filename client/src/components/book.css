@@ -1,9 +1,12 @@
-.bookDiv {
+.booksDiv {
   border-style: solid;
   border-width: medium;
   border-color: red;
+  width: 500px;
+  margin: 20px;
+  padding: 5px;
 }
 
-.bookImage {
+.booksImage {
   max-width: 150px;
 }
