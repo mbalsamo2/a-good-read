@@ -5,6 +5,7 @@ class BookPage  extends Component {
 
   render(props) {
     const book = this.props.book;
+    debugger
 
     return (
       <div>

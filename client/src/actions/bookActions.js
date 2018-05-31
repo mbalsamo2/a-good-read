@@ -7,11 +7,11 @@ export function fetchBooks () {
   }
 }
 
-export function loadbook(bookId) {
+export function loadBook(bookId) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_BOOK'});
     return fetch(`http://localhost:3001/books/${bookId}`)
     .then(resp => resp.json())
-    .then(books => dispatch({ type: 'FETCH_BOOK', book: book }));
+    .then(book => dispatch({ type: 'FETCH_BOOK', book: book }));
   }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
 import { fetchBooks } from '../actions/bookActions.js';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import BooksList from '../components/BooksList.js';
