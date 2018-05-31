@@ -2,7 +2,10 @@ import React from 'react';
 
 const Book = ({ book }) => {
   return (
-    <p>{book.author}</p>
+    <div>
+      <img src={`${book.image_url}`} alt={book.name} />
+      <p>Title: {book.name} || Author: {book.author}</p>
+    </div>
   )
 }
 
