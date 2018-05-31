@@ -9,6 +9,7 @@ class BookPage  extends Component {
     return (
       <div>
         <p>this is a book page</p>
+        <p>{ book }</p>
       </div>
     )
   }

@@ -13,7 +13,7 @@ class BooksList extends Component {
 
       return (
         <div className="BooksPage">
-          <p>{books}</p>
+          <div>{books}</div>
         </div>
       )
     } else {
