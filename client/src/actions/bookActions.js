@@ -31,6 +31,7 @@ export function submitBook(formContent) {
   }
 }
 
+// updates a book from backend update route and updates state
 export function updateBook(book) {
   return (dispatch) => {
     dispatch({ type: 'EDITING_BOOK'});
