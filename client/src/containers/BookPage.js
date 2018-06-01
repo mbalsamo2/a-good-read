@@ -19,9 +19,9 @@ class BookPage  extends Component {
         <div className="textDiv">
           <p className="title">{book.name}</p>
           <p className="author">By: {book.author}</p>
+          <p className="rating">Rating: {book.rating} stars</p>
           <p className="summary">Summary: {book.summary}</p>
           <p className="review">Review: {book.review}</p>
-          <p className="rating">Rating: {book.rating} stars</p>
         </div>
       </div>
     )

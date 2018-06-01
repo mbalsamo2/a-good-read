@@ -1,12 +1,18 @@
 .booksDiv {
   border-style: solid;
   border-width: medium;
-  border-color: red;
+  border-color: black;
   width: 500px;
+  height: 300px;
   margin: 20px;
-  padding: 5px;
+  padding: 20px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fffae6;
 }
 
 .booksImage {
   max-width: 150px;
+  max-height: 225px;
+  padding-top: 10px;
 }

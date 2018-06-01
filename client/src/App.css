@@ -30,7 +30,7 @@
 .bookImage {
   float: left;
   max-width: 200px;
-  padding: 7px;
+  padding: 15px;
 }
 
 .bookDiv {
@@ -57,9 +57,19 @@ body {
 .title {
   font-size: 20pt;
   font-weight: bold;
+  margin-bottom: 1px;
 
 }
 
 /* .author, .summary, .review, .rating {
   margin: 5px;
 } */
+
+.author {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.rating {
+  padding-top: 10px;
+}
