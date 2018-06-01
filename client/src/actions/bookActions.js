@@ -23,7 +23,7 @@ export function submitBook(formContent) {
   return (dispatch) => {
     dispatch({ type: 'SUBMITTING_BOOK' });
     return fetch(`http://localhost:3001/books`, {
-      method: POST,
+      method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({book: formContent})})
       .then(resp => resp.json())

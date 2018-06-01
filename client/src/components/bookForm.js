@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { submitBook } from '../actions/bookActions.js';
+import '../App.css';
 
 class BookForm extends Component {
   constructor(props) {
@@ -19,15 +20,22 @@ class BookForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form">
+        <h3>Add a new book:</h3>
         <form id="book-form">
-          Title: <input type="text" name="name"/><br/>
-          Author: <input type="text" name="author"/><br/>
-          Summary: <textarea name="summary"/><br/>
-          Review: <textarea name="review"/><br/>
-          Rating: <input type="number" name="rating"/><br/>
-          Book Image: <input type="text" name="image_url"/><br/>
-          <input type="submit" />
+          <p>
+            <input type="text" name="name" placeholder="Title"/>
+            <input type="text" name="author" placeholder="Author"/>
+          </p>
+          <p>
+            <textarea name="summary" className="textarea" placeholder="Summary"/>
+            <textarea name="review" className="textarea" placeholder="Review"/>
+          </p>
+          <p>
+          <input type="number" name="rating" placeholder="Rating (1-5)"/>
+          <input type="text" name="image_url" placeholder="Book Image"/>
+          </p>
+          <button type="submit">Add a book</button>
         </form>
       </div>
     )
