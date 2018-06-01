@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { loadBook } from '../actions/bookActions.js';
 import '../App.css';
+import CommentForm from '../components/commentForm.js';
 
 class BookPage  extends Component {
 
@@ -22,6 +23,10 @@ class BookPage  extends Component {
           <p className="rating">Rating: {book.rating} stars</p>
           <p className="summary">Summary: {book.summary}</p>
           <p className="review">Review: {book.review}</p>
+        </div>
+
+        <div className="comments">
+          <CommentForm />
         </div>
       </div>
     )
