@@ -6,7 +6,8 @@ class BooksList extends Component {
 
   render() {
     if (this.props.books) {
-      const books = this.props.books.map((book, index) => {
+      let reverseBooks = this.props.books.reverse()
+      const books = reverseBooks.map((book, index) => {
         return (
         <Book key={index} book={book} /> )
       })
