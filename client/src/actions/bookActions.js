@@ -30,3 +30,26 @@ export function submitBook(formContent) {
       .then(book => dispatch({ type: 'SUBMIT_BOOK', book: book}))
   }
 }
+
+export function updateBook(book) {
+  return (dispatch) => {
+    dispatch({ type: 'EDITING_BOOK'});
+    return fetch(`http://localhost:3001/books/${book.id}`, {
+      method: 'POST',
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: book.name,
+        author: book.author,
+        summary: book.summary,
+        review: book.review,
+        rating: book.rating,
+        image_url: book.image_url
+      })
+    })
+    .then(resp => resp.json())
+    .then(book => dispatch({ type: 'EDITED_BOOK', book: book}))
+  }
+}
