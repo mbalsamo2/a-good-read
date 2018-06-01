@@ -4,6 +4,7 @@ import { fetchBooks } from '../actions/bookActions.js';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import BooksList from '../components/BooksList.js';
+import BookForm from '../components/bookForm.js';
 
 class BooksPage extends Component {
 
@@ -15,6 +16,8 @@ class BooksPage extends Component {
 
     return (
       <div className="BooksPage">
+        <h3>Add a new book:</h3>
+        <BookForm />
         <BooksList books = {this.props.books }/>
       </div>
     )
