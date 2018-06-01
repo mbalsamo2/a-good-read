@@ -59,6 +59,6 @@ body {
   font-weight: bold;
 }
 
-.author .summary .review .rating {
-  line-height: 1px;
-}
+/* .author, .summary, .review, .rating {
+  margin: 5px;
+} */

@@ -35,3 +35,8 @@
   font-family: 'Open Sans', sans-serif;
   color: #354223;
 }
+
+.appName, .description {
+    margin: 0px;
+    padding: 0px;
+}
