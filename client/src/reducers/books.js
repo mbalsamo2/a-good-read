@@ -4,6 +4,8 @@ export default function books (state = [], action) {
       return action.books;
     case 'FETCH_BOOK':
       return action.book;
+    case 'SUBMIT_BOOK':
+      return state.concat(action.book)
     default:
       return state;
   }
