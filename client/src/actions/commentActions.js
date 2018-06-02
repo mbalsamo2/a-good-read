@@ -17,6 +17,4 @@ function addComment (id, comment, user) {
   }
 }
 
-export {
-  addComment
-}
+export default addComment;

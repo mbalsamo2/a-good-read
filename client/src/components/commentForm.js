@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 // import { submitComment } from '../actions/commentActions.js'
 import addComment from '../actions/commentActions.js';
 import bookComments from '../reducers/comments.js';
 
 class CommentForm extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      user: "",
+      comment: "",
+    }
+  }
 
   handleSubmit = (e) => {
+
     e.preventDefault()
-    const { id } = this.props.match.params
-    const user = this.refs.user.value
-    const comment = this.refs.comment.value
-    this.props.addComment(id, user, comment)
-    this.refs.commentForm.reset()
+        debugger
+    // const { id } = this.props.match.params
+    // const user = this.refs.user.value
+    // const comment = this.refs.comment.value
+    // this.props.addComment(id, user, comment)
+    // this.refs.commentForm.reset()
   }
 
   renderComment (comment, i) {
@@ -43,4 +53,10 @@ class CommentForm extends Component {
   }
 }
 
-export default CommentForm;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    addComment: addComment
+  }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(CommentForm);
