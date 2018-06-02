@@ -13,7 +13,7 @@ function bookComments (state =[], action) {
   switch (action.type) {
     case 'ADD_COMMENT':
       return [...state, {
-        user: action.user
+        user: action.user,
         comment: action.comment
     }]
     default:
