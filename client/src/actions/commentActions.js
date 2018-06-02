@@ -7,3 +7,16 @@ export function fetchComments (book) {
       .then(comments => dispatch({ type: 'FETCH_COMMENTS', comments: comments }));
   }
 }
+
+function addComment (id, comment, user) {
+  return {
+    type: 'ADD_COMMENT',
+    id,
+    comment,
+    user
+  }
+}
+
+export {
+  addComment
+}
