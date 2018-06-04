@@ -1,18 +1,20 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = Comment.new(comment_params)
+    @book = Book.find(params[:book_id])
+    @comment = @book.comments.build(comment_params)
+    # @comment = Comment.new(comment_params)
     if @comment.valid?
-      @comment.save
-      render :json => @comment
+      @book.save
+      render :json => @book
     else
-      render json:{message: "There was an error, please try again."}
+      render json:{message: @comment.errors }
     end
   end
 
   private
 
-  class comment_params
+  def comment_params
     params.require(:comment).permit(:user, :comment, :book_id)
   end
 

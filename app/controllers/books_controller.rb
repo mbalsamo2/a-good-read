@@ -29,3 +29,5 @@ class BooksController < ApplicationController
     params.require(:book).permit(:name, :author, :summary, :review, :rating, :image_url, comment_ids:[])
   end
 end
+
+ # nested attriubtes of comments?

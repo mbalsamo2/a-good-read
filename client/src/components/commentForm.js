@@ -23,7 +23,7 @@ class CommentForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
-    this.props.submitComment(this.state);
+    this.props.submitComment(this.state, this.props.bookId);
   }
 
   renderComment (comment, i) {
@@ -40,6 +40,7 @@ class CommentForm extends Component {
 
   render() {
     return (
+
       <div>
         <h3>Add a comment:</h3>
         <form className="comment-form" onSubmit={this.handleSubmit}>

@@ -13,7 +13,6 @@ class BookPage  extends Component {
 
   render(props) {
     const book = this.props.book;
-    
     return (
       <div className="bookDiv">
         <img className="bookImage" src={`${book.image_url}`} alt={book.name} />
@@ -26,7 +25,7 @@ class BookPage  extends Component {
         </div>
 
         <div className="comments">
-          <CommentForm />
+          <CommentForm  bookId = { this.props.match.params.id }/>
         </div>
       </div>
     )
