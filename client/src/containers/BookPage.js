@@ -13,7 +13,7 @@ class BookPage  extends Component {
 
   render(props) {
     const book = this.props.book;
-
+    
     return (
       <div className="bookDiv">
         <img className="bookImage" src={`${book.image_url}`} alt={book.name} />
@@ -35,7 +35,6 @@ class BookPage  extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   const book = state.books.find((book) => book.id === parseInt(ownProps.match.params.id))
-
   if (book) {
     return { book: book }
   } else {

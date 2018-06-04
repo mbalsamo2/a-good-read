@@ -28,13 +28,14 @@ class BookForm extends Component {
     event.preventDefault();
 
     this.props.submitBook(this.state);
+      this.refs.BookForm.reset()
   }
 
   render() {
     return (
       <div className="form">
         <h3>Add a new book:</h3>
-        <form id="book-form" onSubmit={this.onSubmitHandler}>
+        <form ref="BookForm" id="book-form" onSubmit={this.onSubmitHandler}>
           <p>
             <input type="text" name="name" placeholder="Title" value={this.state.name} onChange={this.onChangeHandler}/>
             <input type="text" name="author" placeholder="Author" value={this.state.author} onChange={this.onChangeHandler}/>

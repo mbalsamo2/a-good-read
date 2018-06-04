@@ -18,7 +18,6 @@ class CommentForm extends Component {
   handleSubmit = (e) => {
 
     e.preventDefault()
-        debugger
     // const { id } = this.props.match.params
     // const user = this.refs.user.value
     // const comment = this.refs.comment.value
@@ -37,7 +36,6 @@ class CommentForm extends Component {
     )
   }
 
-      debugger
 
   render() {
     return (
