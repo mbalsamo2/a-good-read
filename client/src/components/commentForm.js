@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { submitComment } from '../actions/commentActions.js'
-import addComment from '../actions/commentActions.js';
-import bookComments from '../reducers/comments.js';
+import { submitComment } from '../actions/commentActions.js';
+
 
 class CommentForm extends Component {
   constructor(props) {
@@ -15,14 +14,16 @@ class CommentForm extends Component {
     }
   }
 
-  handleSubmit = (e) => {
+  onChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
 
+  handleSubmit = (e) => {
     e.preventDefault()
-    // const { id } = this.props.match.params
-    // const user = this.refs.user.value
-    // const comment = this.refs.comment.value
-    // this.props.addComment(id, user, comment)
-    // this.refs.commentForm.reset()
+
+    this.props.submitComment(this.state);
   }
 
   renderComment (comment, i) {
@@ -41,9 +42,9 @@ class CommentForm extends Component {
     return (
       <div>
         <h3>Add a comment:</h3>
-        <form ref="commentForm" className="comment-form" onSubmit={this.handleSubmit}>
-          <input type="text" ref="user" name="user" placeholder="Name"/>
-          <input type="text" ref="comment" name="comment" placeholder="Comment"/>
+        <form className="comment-form" onSubmit={this.handleSubmit}>
+          <input type="text" name="user" placeholder="Name" value={this.state.user} onChange={this.onChange} />
+          <input type="text" name="comment" placeholder="Comment" value={this.state.comment} onChange={this.onChange} />
           <button type="submit">Add a comment</button>
         </form>
       </div>
@@ -53,7 +54,7 @@ class CommentForm extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    addComment: addComment
+    submitComment: submitComment
   }, dispatch)
 }
 

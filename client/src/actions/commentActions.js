@@ -8,6 +8,19 @@ export function fetchComments (book) {
   }
 }
 
+// submits a new comment from backend create route and adds response to state
+export function submitComment(book) {
+  return (dispatch) => {
+    dispatch({ type: 'SUBMITTING_COMMENT' });
+    return fetch(`http://localhost:3001/books/${book.id}/comments`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({comment: book.comments})})
+      .then(resp => resp.json())
+      .then(comment => dispatch({ type: 'SUBMIT_COMMENT', comment: comment}))
+  }
+}
+
 function addComment (id, comment, user) {
   return {
     type: 'ADD_COMMENT',
