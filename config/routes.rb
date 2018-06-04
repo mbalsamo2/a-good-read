@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :books do
-    resources :comments, only: [:new, :show, :index]
+    resources :comments, only: [:new, :create, :show, :index]
   end
 
 end
