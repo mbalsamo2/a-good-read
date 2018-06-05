@@ -29,7 +29,7 @@ class BookPage  extends Component {
 
         <div className="comments">
           <CommentForm  bookId = { this.props.match.params.id }/>
-          <CommentsList comment = {book.comments }/>
+          <CommentsList comment = { book.comments }/>
         </div>
       </div>
     )
