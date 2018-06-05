@@ -10,7 +10,7 @@ class CommentsList extends Component {
       const comments = reverseComments.map((comment, index) => {
         return (
           <div className="commentDiv">
-            <p>{comment.user}: {comment.comment}</p>
+            <p><strong>{comment.user}</strong>: {comment.comment}</p>
           </div>
         )
       })
