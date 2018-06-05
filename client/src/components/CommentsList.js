@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
-import Book from './book.js';
+import BookPage from '../containers/BookPage.js';
 
 class CommentsList extends Component {
   debugger

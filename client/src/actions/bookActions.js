@@ -8,15 +8,17 @@ export function fetchBooks () {
   }
 }
 
-// loads index of single book in JSON format from backend API
-export function loadBook(bookId) {
-  return (dispatch) => {
-    dispatch({ type: 'LOADING_BOOK'});
-    return fetch(`http://localhost:3001/books/${bookId}`)
-    .then(resp => resp.json())
-    .then(book => dispatch({ type: 'FETCH_BOOK', book: book }));
-  }
-}
+// loads single book in JSON format from backend API
+// export function loadBook(bookId) {
+//   return (dispatch) => {
+//     dispatch({ type: 'LOADING_BOOK'});
+//     return fetch(`http://localhost:3001/books/${bookId}`)
+//     .then(resp => resp.json())
+//     .then(book =>  { debugger } )
+//       // dispatch({ type: 'FETCH_BOOK', book: book }))}
+//
+//   }
+// }
 
 // submits a new book from backend create route and adds response to state
 export function submitBook(formContent) {

@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
 
-    render :json => @books
+    render :json => @books, include: ["comments"]
   end
 
   def show
@@ -26,8 +26,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :author, :summary, :review, :rating, :image_url, comment_ids:[])
+    params.require(:book).permit(:name, :author, :summary, :review, :rating, :image_url)
   end
 end
-
- # nested attriubtes of comments?

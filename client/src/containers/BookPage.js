@@ -4,15 +4,18 @@ import { bindActionCreators } from 'redux';
 import { loadBook } from '../actions/bookActions.js';
 import '../App.css';
 import CommentForm from '../components/commentForm.js';
+import CommentsList from '../components/CommentsList.js';
+import { fetchComments } from '../actions/commentActions.js';
 
 class BookPage  extends Component {
 
-  // componentDidMount() {
-  //   this.props.loadBook(bookId)
-  // }
+  componentDidMount() {
+    this.props.fetchComments(this.props.book.id)
+  }
 
   render(props) {
     const book = this.props.book;
+
     return (
       <div className="bookDiv">
         <img className="bookImage" src={`${book.image_url}`} alt={book.name} />
@@ -26,6 +29,7 @@ class BookPage  extends Component {
 
         <div className="comments">
           <CommentForm  bookId = { this.props.match.params.id }/>
+          <CommentsList comment = {book.comments }/>
         </div>
       </div>
     )
@@ -43,7 +47,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    loadBook: loadBook
+    // loadBook: loadBook,
+    fetchComments: fetchComments
   }, dispatch);
 };
 

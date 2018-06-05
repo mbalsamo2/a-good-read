@@ -1,8 +1,8 @@
 // loads index of all the books in JSON format from backend API
-export function fetchComments (book) {
+export function fetchComments (comments, bookId) {
   return (dispatch) => {
     dispatch({ type: 'LOADING_COMMENTS'});
-    return fetch(`http://localhost:3001/books/${book.id}/comments`)
+    return fetch(`http://localhost:3001/books/${bookId}/comments`)
       .then(response => response.json())
       .then(comments => dispatch({ type: 'FETCH_COMMENTS', comments: comments }));
   }
@@ -17,7 +17,7 @@ export function submitComment(comment, bookId) {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({comment: comment})})
       .then(resp => resp.json())
-      .then(comment => dispatch({ type: 'SUBMIT_COMMENT', comment: comment}))
+      .then(book => dispatch({ type: 'UPDATE_BOOK', book}))
   }
 }
 
