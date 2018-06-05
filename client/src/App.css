@@ -104,3 +104,12 @@ body {
   vertical-align: top;
   background-color: #fffae6;
 }
+
+.commentDiv {
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  margin: 15px;
+  padding: 15px;
+  background-color: #fff7db
+}

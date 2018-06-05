@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../components/NavBar.css';
 import BookPage from '../containers/BookPage.js';
+import '../App.css';
 
 class CommentsList extends Component {
   render() {
     if (this.props.comment) {
-      const comments = this.props.comment.map((comment, index) => {
+      let reverseComments = this.props.comment.reverse()
+      const comments = reverseComments.map((comment, index) => {
         return (
-          <div>
+          <div className="commentDiv">
             <p>{comment.user}: {comment.comment}</p>
           </div>
         )
