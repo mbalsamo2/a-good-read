@@ -35,13 +35,14 @@
 
 .bookDiv {
   width: 800px;
-  /* border-style: solid;
+  border-style: solid;
   border-width: medium;
-  border-color: red; */
+  border-color: black;
   overflow: auto;
   padding: 5px;
   padding: 0px;
   margin: auto;
+  /* box-shadow: 10px 10px 5px grey; */
 }
 
 .textDiv {
@@ -60,10 +61,6 @@ body {
   margin-bottom: 1px;
 
 }
-
-/* .author, .summary, .review, .rating {
-  margin: 5px;
-} */
 
 .author {
   margin-top: 0px;
@@ -85,6 +82,7 @@ body {
   display: inline-block;
   vertical-align: top;
   background-color: #fffae6;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .textarea {
@@ -96,13 +94,14 @@ body {
   border-style: solid;
   border-width: medium;
   border-color: black;
-  width: 700px;
+  width: 710px;
   height: 700px;
   margin: 20px;
   padding: 20px;
   display: inline-block;
   vertical-align: top;
   background-color: #fffae6;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .commentDiv {
