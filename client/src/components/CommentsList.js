@@ -9,7 +9,7 @@ class CommentsList extends Component {
       let reverseComments = this.props.comment.reverse()
       const comments = reverseComments.map((comment, index) => {
         return (
-          <div className="commentDiv">
+          <div className="commentDiv" key={index}>
             <p><strong>{comment.user}</strong>: {comment.comment}</p>
           </div>
         )

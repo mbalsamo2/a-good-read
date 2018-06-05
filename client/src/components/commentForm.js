@@ -21,8 +21,9 @@ class CommentForm extends Component {
   }
 
   handleSubmit = (e) => {
+    debugger
     e.preventDefault()
-
+    debugger
     this.props.submitComment(this.state, this.props.bookId);
   }
 
