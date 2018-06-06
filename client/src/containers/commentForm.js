@@ -29,18 +29,6 @@ class CommentForm extends Component {
     this.refs.userInput.value = '';
   }
 
-  renderComment (comment, i) {
-    return (
-      <div className='comment' key={i}>
-        <p>
-          <strong>{comment.user}</strong>
-          {comment.text}
-        </p>
-      </div>
-    )
-  }
-
-
   render() {
     return (
 
