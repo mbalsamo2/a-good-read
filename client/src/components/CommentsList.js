@@ -3,10 +3,9 @@ import '../components/NavBar.css';
 import BookPage from '../containers/BookPage.js';
 import '../App.css';
 
-class CommentsList extends Component {
-  render() {
-    if (this.props.comment) {
-      let reverseComments = this.props.comment.reverse()
+const CommentsList = ({ comment }) => {
+    if (comment) {
+      let reverseComments = comment.reverse()
       const comments = reverseComments.map((comment, index) => {
         return (
           <div className="commentDiv" key={index}>
@@ -24,6 +23,5 @@ class CommentsList extends Component {
       return null;
     }
   }
-}
 
 export default CommentsList;
