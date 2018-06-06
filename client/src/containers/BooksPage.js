@@ -4,7 +4,7 @@ import { fetchBooks } from '../actions/bookActions.js';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import BooksList from '../components/BooksList.js';
-import BookForm from '../components/bookForm.js';
+import BookForm from './bookForm.js';
 
 class BooksPage extends Component {
 
