@@ -25,6 +25,8 @@ class CommentForm extends Component {
     e.preventDefault()
     debugger
     this.props.submitComment(this.state, this.props.bookId);
+    this.refs.commentInput.value = '';
+    this.refs.userInput.value = '';
   }
 
   renderComment (comment, i) {
@@ -45,8 +47,8 @@ class CommentForm extends Component {
       <div>
         <h3>Add a comment:</h3>
         <form className="comment-form" onSubmit={this.handleSubmit}>
-          <input type="text" name="user" placeholder="Name" value={this.state.user} onChange={this.onChange} />
-          <input type="text" name="comment" placeholder="Comment" value={this.state.comment} onChange={this.onChange} />
+          <input ref="userInput" type="text" name="user" placeholder="Name" value={this.state.user} onChange={this.onChange} />
+          <input ref="commentInput" type="text" name="comment" placeholder="Comment" value={this.state.comment} onChange={this.onChange} />
           <button type="submit">Add a comment</button>
         </form>
       </div>
