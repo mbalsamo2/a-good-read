@@ -56,3 +56,7 @@ export function updateBook(book) {
     .then(book => dispatch({ type: 'EDITED_BOOK', book: book}))
   }
 }
+
+export const onLike = () => {
+  return { type: 'INCREASE_LIKES' }
+}

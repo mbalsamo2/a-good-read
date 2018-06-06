@@ -9,6 +9,9 @@ export default function books (state = [], action) {
     case 'UPDATE_BOOK':
       const books = state.filter(book => book.id !== action.book.id )
       return [...books, action.book]
+    case 'INCREASE_LIKES':
+    debugger
+      return state.book.likes + 1
     default:
       return state;
   }
