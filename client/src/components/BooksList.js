@@ -4,8 +4,8 @@ import Book from './book.js';
 
 const BooksList = ({ booksList }) => {
   if (booksList) {
-    let reverseBooks = booksList.reverse()
-    const books = reverseBooks.map((book, index) => {
+    //let reverseBooks = booksList.reverse()
+    const books = booksList.map((book, index) => {
       return (
       <Book key={index} book={book} /> )
     })

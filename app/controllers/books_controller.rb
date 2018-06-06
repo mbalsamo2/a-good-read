@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
+    @books = Book.order(:created_at => :desc)
 
     render :json => @books, include: ["comments"]
   end

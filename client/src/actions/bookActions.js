@@ -23,7 +23,7 @@ export function fetchBooks () {
 // submits a new book from backend create route and adds response to state
 export function submitBook(formContent) {
   return (dispatch) => {
-    dispatch({ type: 'SUBMITTING_BOOK' });
+    //dispatch({ type: 'SUBMITTING_BOOK' });
     return fetch(`http://localhost:3001/books`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},

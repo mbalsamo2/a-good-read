@@ -5,7 +5,7 @@ export default function books (state = [], action) {
     case 'FETCH_BOOK':
       return action.book;
     case 'SUBMIT_BOOK':
-      return state.concat(action.book)
+      return [action.book, ...state]
     case 'UPDATE_BOOK':
       const books = state.filter(book => book.id !== action.book.id )
       return [...books, action.book]

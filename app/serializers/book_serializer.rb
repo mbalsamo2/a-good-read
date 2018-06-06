@@ -1,5 +1,5 @@
 class BookSerializer < ActiveModel::Serializer
-  attributes :id, :name, :author, :summary, :comment_id, :review, :rating, :image_url
+  attributes :id, :name, :author, :summary, :comment_id, :review, :rating, :image_url, :likes
   has_many :comments, serializer: CommentSerializer
   # def comments
   #   @book = Book.find(params[:id])
