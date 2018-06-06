@@ -17,7 +17,7 @@ class BooksPage extends Component {
     return (
       <div className="BooksPage">
         <BookForm />
-        <BooksList books = {this.props.books }/>
+        <BooksList booksList = {this.props.books }/>
       </div>
     )
   }
