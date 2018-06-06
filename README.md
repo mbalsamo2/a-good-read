@@ -1,10 +1,14 @@
 A Good Read
 
-This app is written in React utilizing Redux to maintain state. It is built on a Rails bend end setup to serve as an API end point.
+This app is written in React utilizing Redux to maintain state. It is built on a Rails backend setup to serve as an API end point.
 
 Installation
 
-- tbd
+- fork and clone onto your own machine
+- switch onto the db_change branch
+- bundle install and npm install
+- from the main "a-good-read" directory, type rake start into your console to get the app started
+- once the app is up and working, navigate through the features and enjoy!
 
 Contributing
 
