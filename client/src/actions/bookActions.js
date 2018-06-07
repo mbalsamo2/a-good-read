@@ -57,10 +57,16 @@ export function updateBook(book) {
   }
 }
 
-export function onLike (book) {
-  return {
-    type: 'INCREASE_LIKES',
-    book: this.book,
-    likes: this.book.likes + 1,
+export function onLike(book) {
+  return dispatch => {
+    return fetch(`http://localhost:3001/books/${book.id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ book }),
+    })
+      .then(res => res.json())
+      .then(book => {
+        dispatch({ type: 'INCREASE_LIKES', book })
+      })
   }
 }

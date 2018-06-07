@@ -22,10 +22,18 @@ class BooksController < ApplicationController
     end
   end
 
+  def update
+    @book = Book.find(params[:id])
+
+    if @book.update(book_params)
+      render json: @book
+    end
+  end
+
 
   private
 
   def book_params
-    params.require(:book).permit(:name, :author, :summary, :review, :rating, :image_url)
+    params.require(:book).permit(:name, :author, :summary, :review, :rating, :image_url, :likes)
   end
 end

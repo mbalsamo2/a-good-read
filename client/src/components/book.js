@@ -13,9 +13,10 @@ class Book extends Component {
   //   this.props.onLike(this.state);
   // }
 
-  like = (props) => {
-    this.props.onLike(this.book)
-  }
+  like = () => {
+      const updatedBook = Object.assign({}, this.props.book, { likes: this.props.book.likes + 1 })
+      this.props.onLike(updatedBook)
+    }
 
 
   render() {
@@ -26,7 +27,7 @@ class Book extends Component {
           <img className="booksImage" src={`${book.image_url}`} alt={book.name} />
         </Link>
         <h3>{book.name} || {book.author}</h3>
-        <p><button onClick={ this.like.bind(this.props) }>Like</button> {book.likes}</p>
+        <p><button onClick={ this.like }>Like</button> {book.likes}</p>
       </div>
     )
   }
