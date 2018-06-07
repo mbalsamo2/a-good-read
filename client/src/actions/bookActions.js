@@ -57,6 +57,6 @@ export function updateBook(book) {
   }
 }
 
-export const onLike = () => {
+export function onLike (book) {
   return { type: 'INCREASE_LIKES' }
 }

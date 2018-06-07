@@ -8,11 +8,10 @@ import { onLike } from '../actions/bookActions.js';
 class Book extends Component {
 
 
-  // handleClick = () => {
-  //   this.setState({
-  //     likes: this.state.likes + 1
-  //   })
-  // }
+  handleClick = (e) =>  {
+    e.preventDefault()
+    this.props.onLike(this.state);
+  }
 
 
   render() {
@@ -23,7 +22,7 @@ class Book extends Component {
           <img className="booksImage" src={`${book.image_url}`} alt={book.name} />
         </Link>
         <h3>{book.name} || {book.author}</h3>
-        <p><button onClick={ onLike }>Like</button> {book.likes}</p>
+        <p><button onClick={this.handleClick }>Like</button> {book.likes}</p>
       </div>
     )
   }
