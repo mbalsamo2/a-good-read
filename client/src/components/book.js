@@ -14,7 +14,7 @@ class Book extends Component {
   // }
 
   like = (props) => {
-    this.props.onLike()
+    this.props.onLike(this.book)
   }
 
 
@@ -26,7 +26,7 @@ class Book extends Component {
           <img className="booksImage" src={`${book.image_url}`} alt={book.name} />
         </Link>
         <h3>{book.name} || {book.author}</h3>
-        <p><button onClick={ this.like }>Like</button> {book.likes}</p>
+        <p><button onClick={ this.like.bind(this.props) }>Like</button> {book.likes}</p>
       </div>
     )
   }
