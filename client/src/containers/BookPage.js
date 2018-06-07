@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loadBook } from '../actions/bookActions.js';
+// import { loadBook } from '../actions/bookActions.js';
 import '../App.css';
 import CommentForm from './commentForm.js';
 import CommentsList from '../components/CommentsList.js';

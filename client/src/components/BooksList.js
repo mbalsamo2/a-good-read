@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../components/NavBar.css';
 import Book from './book.js';
 

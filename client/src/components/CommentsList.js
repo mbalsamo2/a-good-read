@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+import React from 'react';
 import '../components/NavBar.css';
-import BookPage from '../containers/BookPage.js';
+// import BookPage from '../containers/BookPage.js';
 import '../App.css';
 
 const CommentsList = ({ comment }) => {
